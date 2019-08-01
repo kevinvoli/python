@@ -1,0 +1,18 @@
+{% extends "layouts/base.html"  %}
+{% block title %} {% endblock %}
+{% block header %}
+    {% include "layouts/nav.html" %}
+{% endblock %}"
+{% block article %} 
+{% if message %}  {{ message }} ! {% endif%}
+<div class="container">
+    {% for user in all_user%}
+        <p>{{user.name_user}} </p>
+
+    {% endfor%}
+
+</div>
+{% endblock %}
+{% block footer %}
+
+{% endblock %}

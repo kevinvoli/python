@@ -1,0 +1,45 @@
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark black pink scrolling-navbar" style="margin-bottom: 50px">
+        <a class="navbar-brand" href="{% url 'accueil' %} "><strong> <h1> <span>P</span>robet</h1></strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+            <a class="nav-link" href="{% url 'accueil' %} ">Accueil <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Athletisme</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'course' %} ">Autre sport</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'inscription'%} ">Parie</a>
+            </li>
+        </ul>
+        {% if request.user.is_authenticated %}
+        <ul class="navbar-nav nav-flex-icons">
+
+        <li class="nav-item">
+                <a class="nav-link"href="{% url 'profil'%} " ><i class="fab fa-facebook-f">{{user}}</i></a>
+        </li>
+        <li class="nav-item">
+                <a class="nav-link"href="{% url 'logout'%} " ><i class="fab fa-facebook-f">deconnection</i></a>
+        </li>
+        </ul>
+        
+        {% else %}
+        <ul class="navbar-nav nav-flex-icons">
+            <li class="nav-item">
+            <a class="nav-link"href="{% url 'inscription'%} " ><i class="fab fa-facebook-f">inscription</i></a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'connection'%} "><i class="fab fa-twitter"> connection </i></a>
+            </li>
+           
+        </ul>
+        {% endif %}
+        </div>
+    </nav>

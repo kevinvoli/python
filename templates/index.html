@@ -1,0 +1,39 @@
+{% extends "layouts/base.html"  %}
+
+{% block title %} {% endblock %}
+
+{% block header %}
+    {% include "layouts/nav.html" %}
+{% endblock %}"
+{% block article %} 
+<div style="">
+<table class="table  table-responsive " style="background-color: aquamarine">
+    <thead>
+    {% for compet in competit %}
+        <tr class="black" style="color: aliceblue">
+            <th> {{compet.name }}</th>
+            <th>{{compet.pays}}</th>
+            <th>{{compet.date_add}}</th>
+        </tr>
+        <tr class="red">
+            <th> Nom d'athlet</th>
+            <th>nationalite</th>
+            <th>action</th>
+        </tr>
+    </thead>
+    {%for user in coureur %} 
+        <tbody>
+            <tr>
+                <td>{{user.nom}}</td>
+                <td>{{user.nationaliter}}</td>
+                <td> <button class="btn btn-success "> parie </button> </td>
+            </tr>
+        </tbody>
+    {% endfor %}
+    {% endfor %}
+</table>
+</div>
+{% endblock %}
+{% block footer %}
+    {% include "layouts/footer.html" %}
+{% endblock %}

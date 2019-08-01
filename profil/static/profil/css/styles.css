@@ -1,0 +1,16 @@
+body{
+    
+    background:  url("../img/images33.jpeg") center fixed no-repeat;
+    background-size: cover;
+}
+.main{
+    background-color: rgb(190, 233, 142);
+    margin:50px;
+    border-radius: 10px;    
+    
+}
+.centre{
+    margin: 100px 50px 20px 50px;
+    padding: 20px;
+    
+}

@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %} proBet{% endblock %} </title>
+    <link rel="stylesheet" href="{% static 'profil/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'profil/css/mdb.min.css' %}">
+    <link rel="stylesheet" href="{% static 'profil/css/styles.css' %}">
+</head>
+<body>
+    <header>
+        {% block header %}{% endblock %}
+    </header>
+    <div class="main centre " style="">
+        <div class="row mb-4">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 white">
+                <div>
+                    
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia blanditiis animi neque qui consectetur voluptas. Necessitatibus, sapiente? Iure voluptatibus quia eveniet possimus assumenda voluptatem voluptates, repellendus corporis saepe nam doloribus?</p>
+                </div>
+                
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 article">
+                    {% block article %}
+                    {% endblock %}
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 white">
+            </div>
+        </div>
+    </div>
+    {% block footer %} {% endblock %}
+    <script src="{% static 'profil/js/jquery-3.3.1.min.js' %} "></script>
+    <script src="{% static 'profil/js/bootstrap.min.js' %} "></script>
+    <script src="{% static 'profil/js/mdb.min.js' %} "></script>
+    <script src="{% static 'profil/js/popper.min.js' %} "></script>
+</body>
+</html>
